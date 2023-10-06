@@ -1,15 +1,5 @@
 
-const galleryItems = [
-    {
-        src: 'large-image-1.jpg',
-        alt: 'Image 1 description',
-    },
-    {
-        src: 'large-image-2.jpg',
-        alt: 'Image 2 description',
-    },
-    
-];
+import galleryItems from './gallery-items.js';
 
 
 function createGalleryMarkup(items) {
@@ -25,6 +15,7 @@ function createGalleryMarkup(items) {
 
 const gallery = document.querySelector('.gallery');
 gallery.innerHTML = createGalleryMarkup(galleryItems);
+
 
 const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
